@@ -6,7 +6,6 @@ DIV = 'DIV'
 LPAREN = '('
 RPAREN = ')'
 EOF = 'EOF'
-EXPONENT = 'EXPONENT'
 
 class Token{
     constructor(type, value){
@@ -75,6 +74,10 @@ class lexer extends Object {
             
             if(this.current_char === '*'){
                 this.advance()
+                // if(this.current_char == '*'){
+                //     this.advance()
+                //     return new Token(EXPONENT, '**')
+                // }
                 return new Token(MUL, '*')
             }
 
@@ -261,7 +264,7 @@ class Interpreter extends Object{
     }
 }
 
-Lexer = new lexer('((-4 + 2) *4 -8) ')
+Lexer = new lexer('((-7 + 2)*2) ')
 parser = new Parser(Lexer)
 // console.log(parser.parse().left)
 interpreter = new Interpreter(parser)
