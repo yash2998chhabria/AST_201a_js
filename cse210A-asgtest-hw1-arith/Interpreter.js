@@ -1,3 +1,12 @@
+#!/usr/bin/env node
+var readline = require('readline');
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  
+  });
+
+
 INTEGER = 'INTEGER'
 PLUS = 'PLUS'
 MINUS = 'MINUS'
@@ -264,8 +273,21 @@ class Interpreter extends Object{
     }
 }
 
-Lexer = new lexer('((-7 + 2)*2) ')
-parser = new Parser(Lexer)
-// console.log(parser.parse().left)
-interpreter = new Interpreter(parser)
-console.log(interpreter.interpret())
+// Lexer = new lexer('((-7 + 2)*2) ')
+// parser = new Parser(Lexer)
+// // console.log(parser.parse().left)
+// interpreter = new Interpreter(parser)
+// console.log(interpreter.interpret());
+
+try {
+    rl.question("calc> ", function(text) {
+        Lexer = new lexer(text)
+        parser = new Parser(Lexer)
+        interpreter = new Interpreter(parser)
+        console.log(interpreter.interpret());
+        rl.close();
+        });         
+}
+catch (error) {
+    throw 'Error' + error
+}

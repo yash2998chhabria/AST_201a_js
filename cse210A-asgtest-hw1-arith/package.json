@@ -1,0 +1,22 @@
+{
+  "name": "ast_201a_js",
+  "version": "1.0.0",
+  "description": "arith_interpreter",
+  "main": "Interpreter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yash2998chhabria/AST_201a_js.git"
+  },
+  "author": "Yash Rajesh Chhabria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yash2998chhabria/AST_201a_js/issues"
+  },
+  "homepage": "https://github.com/yash2998chhabria/AST_201a_js#readme",
+  "bin" : {
+    "execute" : "Interpreter.js"
+  }
+}
