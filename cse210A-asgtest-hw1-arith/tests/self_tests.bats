@@ -17,5 +17,5 @@ load harness
 }
 
 @test "self-5" {
-  check ' 7 / (-5 + 3 * 3)' '1'
+  check ' 7 * (-5 + 3 % 3)' '-35'
 }
