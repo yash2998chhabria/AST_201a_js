@@ -1,5 +1,5 @@
 run:
-	apt install nodejs npm 
-	chmod +x Interpreter.js
-	npm i
-	npm link 
+	sudo apt install nodejs npm 
+	sudo chmod +x Interpreter.js
+	sudo npm i
+	sudo npm link 
