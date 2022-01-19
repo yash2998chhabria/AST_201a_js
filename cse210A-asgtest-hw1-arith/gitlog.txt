@@ -1,0 +1,59 @@
+commit fbbc51b797dc835d26844d0ee66885096d65a105
+Author: yash2998chhabria <yash2998chhabria@gmail.com>
+Date:   Tue Jan 18 20:17:12 2022 -0800
+
+    Update Makefile
+
+commit ca025d5c61b5aefd3ece8f94ebf8ed24c1714177
+Author: yash2998chhabria <yash2998chhabria@gmail.com>
+Date:   Tue Jan 18 20:08:04 2022 -0800
+
+    makefile updated
+
+commit f8825e263d612d00ac51b60b7fce4ebfb0d0ec4f
+Author: yash2998chhabria <yash2998chhabria@gmail.com>
+Date:   Tue Jan 18 19:47:14 2022 -0800
+
+    Update self_tests.bats
+
+commit c2aeaf1f80a65e8dbd17af63acb55ad9aed32f22
+Author: yash2998chhabria <yash2998chhabria@gmail.com>
+Date:   Tue Jan 18 19:43:38 2022 -0800
+
+    added test cases and Modulo
+
+commit d1f00b5e3b62e76a35d0d8d3a6efa13085320e40
+Author: yash2998chhabria <yash2998chhabria@gmail.com>
+Date:   Tue Jan 18 19:16:14 2022 -0800
+
+    set up complete maybe
+
+commit 0298eec41bfefd5ce3859872f1e17b57da8fa044
+Author: yash2998chhabria <yash2998chhabria@gmail.com>
+Date:   Tue Jan 18 19:11:52 2022 -0800
+
+    setting up test cases
+
+commit c7c6481c1e449dafc987349884cb2abc87a431f4
+Author: yash2998chhabria <yash2998chhabria@gmail.com>
+Date:   Mon Jan 17 23:06:44 2022 -0800
+
+    completed r&d
+
+commit b45a4189b0be387a7876dec77b68a54281a2e997
+Author: yash2998chhabria <yash2998chhabria@gmail.com>
+Date:   Mon Jan 17 23:02:17 2022 -0800
+
+    completed with negative integers
+
+commit 14df0784b2d4ea78f9daac7a7edc3a05e11f2556
+Author: yash2998chhabria <yash2998chhabria@gmail.com>
+Date:   Sun Jan 16 17:00:43 2022 -0800
+
+    initial
+
+commit d27c1d02462dc07c46f5e168420279fb070a2d74
+Author: yash2998chhabria <yash2998chhabria@gmail.com>
+Date:   Sun Jan 16 16:59:52 2022 -0800
+
+    Initial commit
