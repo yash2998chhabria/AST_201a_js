@@ -12,6 +12,7 @@ PLUS = 'PLUS'
 MINUS = 'MINUS'
 MUL = 'MUL'
 DIV = 'DIV'
+MODULO = 'MODULO'
 LPAREN = '('
 RPAREN = ')'
 EOF = 'EOF'
@@ -83,16 +84,17 @@ class lexer extends Object {
             
             if(this.current_char === '*'){
                 this.advance()
-                // if(this.current_char == '*'){
-                //     this.advance()
-                //     return new Token(EXPONENT, '**')
-                // }
                 return new Token(MUL, '*')
             }
 
             if(this.current_char === '/'){
                 this.advance()
                 return new Token(DIV, '/')
+            }
+
+            if(this.current_char === '%'){
+                this.advance()
+                return new Token(MODULO, '%')
             }
             
             if(this.current_char === '('){
@@ -186,13 +188,16 @@ class Parser extends Object {
     term() {
         let node = this.factor()
 
-        while([MUL,DIV].includes(this.current_token.type)){
+        while([MUL,DIV,MODULO].includes(this.current_token.type)){
             let token = this.current_token
             if(token.type === MUL){
                 this.eat(MUL)
             }
             else if (token.type === DIV){
                 this.eat(DIV)
+            }
+            else if(token.type === MODULO){
+                this.eat(MODULO)
             }
             node = new BinOp(node,token,this.factor())
         }
@@ -255,6 +260,9 @@ class Interpreter extends Object{
         if(node.op.type == DIV){
             return this.visit(node.left) / this.visit(node.right)
         }
+        if(node.op.type == MODULO){
+            return this.visit(node.left) % this.visit(node.right)
+        }
     }
 
     visit_SinOp(node) {
@@ -273,14 +281,8 @@ class Interpreter extends Object{
     }
 }
 
-// Lexer = new lexer('((-7 + 2)*2) ')
-// parser = new Parser(Lexer)
-// // console.log(parser.parse().left)
-// interpreter = new Interpreter(parser)
-// console.log(interpreter.interpret());
-
 try {
-    rl.question("calc> ", function(text) {
+    rl.question("", function(text) {
         Lexer = new lexer(text)
         parser = new Parser(Lexer)
         interpreter = new Interpreter(parser)
@@ -289,5 +291,5 @@ try {
         });         
 }
 catch (error) {
-    throw 'Error' + error
+    throw 'Error'
 }
